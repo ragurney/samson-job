@@ -66,7 +66,7 @@ func NewJob(options ...Option) *Job {
 }
 
 func (j *Job) triggerDeploy() (deployID string, err error) {
-	url := fmt.Sprintf("https://%s/projects/%s/stages/%s/deploys", j.url, j.project, j.stage)
+	url := fmt.Sprintf("%s/projects/%s/stages/%s/deploys", j.url, j.project, j.stage)
 	data := []byte(fmt.Sprintf(`{"deploy": {"reference": %q}}`, j.reference))
 
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(data))
@@ -107,7 +107,7 @@ func (j *Job) triggerDeploy() (deployID string, err error) {
 func (j *Job) getDeployStatus(deployID string) (d deploy, err error) {
 	log.Debug().Msgf("JOB - SAMSON: Fetching deploy (id: %s) status...", deployID)
 
-	url := fmt.Sprintf("https://%s/projects/%s/deploys/%s", j.url, j.project, deployID)
+	url := fmt.Sprintf("%s/projects/%s/deploys/%s", j.url, j.project, deployID)
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
