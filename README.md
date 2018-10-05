@@ -1,4 +1,4 @@
-# travis-job
+# samson-job
 A simple tool written in Go to kick off, monitor, and report on a single [Samson](https://github.com/zendesk/samson)
 deploy.
 
@@ -8,7 +8,7 @@ Required Environment Variables:
 * `REFERENCE` (e.g. 'master', 'v123', '9e44cb0fe')
 * `SAMSON_STAGE` (id or permalink)
 * `SAMSON_TOKEN`
-* `SAMSON_URL` (e.g. samson.cooldomain.org)
+* `SAMSON_URL` (e.g. 'samson.cooldomain.org')
 
 Optional Environment Variables:
 * `POLL_INTERVAL` (in seconds, default: 30)
