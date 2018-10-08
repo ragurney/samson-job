@@ -1,4 +1,8 @@
 # samson-job
+
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/ragurney/samson-job.svg)](https://hub.docker.com/r/ragurney/samson-job/)
+
 A simple tool written in Go to kick off, monitor, and report on a single [Samson](https://github.com/zendesk/samson)
 deploy.
 
